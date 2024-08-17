@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simon Game</title>
+    <style>
+        body {
+            background-color: #333;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: white;
+            text-align: center;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            height: 70vh;
+        }
+
+        .square {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin: 20px;
+            cursor: pointer;
+            transition: transform 0.2s, background-color 0.2s;
+        }
+
+        .square:hover {
+            background-color: #555;
+        }
+
+        .square:active {
+            transform: scale(0.95);
+        }
+
+        .square:nth-child(1) {
+            background-color: #FF5733; /* Orange */
+        }
+
+        .square:nth-child(2) {
+            background-color: #C70039; /* Red */
+        }
+
+        .square:nth-child(3) {
+            background-color: #900C3F; /* Dark Red */
+        }
+
+        .square:nth-child(4) {
+            background-color: #581845; /* Purple */
+        }
+
+        .message {
+            font-size: 24px;
+            margin-top: 20px;
+        }
+
+        .button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 20px;
+            transition: background-color 0.3s;
+        }
+
+        .button:hover {
+            background-color: #45a049;
+        }
+        .flash {
+            background-color: white !important;
+        }
+
+        .userflash {
+            background-color: black !important;
+        }
+
+
+    </style>
+</head>
+<body>
+    <h1>Simon Game</h1>
+    <h2 class="message hlevel">Press any key to start the game!</h2>
+    <div class="container">
+        <div class="square" id="square1"></div>
+        <div class="square" id="square2"></div>
+        <div class="square" id="square3"></div>
+        <div class="square" id="square4"></div>
+    </div>
+    <button class="button" onclick="resetGame()">Reset Game</button>
+    <script src="index.js"></script>
+</body>
+</html>
